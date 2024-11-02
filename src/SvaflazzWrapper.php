@@ -37,7 +37,7 @@ class SvaflazzWrapper
      * @param string|null $buyerSkuCode
      * @return mixed
      */
-    public function priceList(string $cmd='', string $buyerSkuCode = '')
+    public function priceList(string $cmd = 'prepaid', string $buyerSkuCode = '')
     {
         return (new PriceList($this->client, $cmd, $buyerSkuCode))->perform();
     }
