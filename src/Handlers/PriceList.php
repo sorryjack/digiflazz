@@ -19,7 +19,7 @@ class PriceList extends Base
         parent::__construct($client);
 
         $body = [
-            'cmd' => 'prepaid',
+            'cmd' => $cmd,
             'sign' => $this->sign($this->keyword)
         ];
 
