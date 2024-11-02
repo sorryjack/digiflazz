@@ -10,10 +10,11 @@ class PriceList extends Base
 
     /**
      * PriceList constructor.
+     * @param string $cmd
      * @param string $buyerSkuCode
      * @param SvaflazzClient $client
      */
-    public function __construct(SvaflazzClient $client, string $buyerSkuCode)
+    public function __construct(SvaflazzClient $client, string $cmd='prepaid', string $buyerSkuCode='')
     {
         parent::__construct($client);
 
