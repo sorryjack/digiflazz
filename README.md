@@ -67,15 +67,15 @@ Svaflazz::deposit($amount, $bank, $owner_name);
 
 #### Price List
 
-This feature is for retrieving the price list in Digiflazz.
+This feature is for retrieving the price list in Digiflazz. Default is 'prepaid'
 
 ```
-Svaflazz::priceList();
+Svaflazz::priceList(); / Svaflazz::priceList('pasca');
 ```
 
 Alternatively, you can also pass your `buyer_sku_code` as an optional parameter to get the price for that code.
 ```
-Svaflazz::priceList($buyer_sku_code);
+Svaflazz::priceList($cmd,$buyer_sku_code);
 ```
 
 #### Topup
