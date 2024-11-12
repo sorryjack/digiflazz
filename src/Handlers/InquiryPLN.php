@@ -14,10 +14,10 @@ class InquiryPLN extends Base
     public function __construct(SvaflazzClient $client, string $customerNo)
     {
         parent::__construct($client);
-        $this->client->setUrl('/transaction')
+        $this->client->setUrl('/inquiry-pln')
             ->setBody([
-                'commands' => 'pln-subscribe',
-                'customer_no' => $customerNo
+                'customer_no' => $customerNo,
+                'sign' => $this->sign($customerNo)
             ]);
     }
 }
