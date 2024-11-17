@@ -69,22 +69,24 @@ class SvaflazzWrapper
      * @param string $buyerSkuCode
      * @param string $customerNo
      * @param string $refId
+     * @param int $amount
      * @return mixed
      */
-    public function checkBill(string $buyerSkuCode, string $customerNo, string $refId)
+    public function checkBill(string $buyerSkuCode, string $customerNo, string $refId, int $amount = 0)
     {
-        return (new CheckBill($this->client, $buyerSkuCode, $customerNo, $refId))->perform();
+        return (new CheckBill($this->client, $buyerSkuCode, $customerNo, $refId, $amount))->perform();
     }
 
     /**
      * @param string $buyerSkuCode
      * @param string $customerNo
      * @param string $refId
+     * @param int $amount
      * @return mixed
      */
-    public function payBill(string $buyerSkuCode, string $customerNo, string $refId)
+    public function payBill(string $buyerSkuCode, string $customerNo, string $refId, int $amount = 0)
     {
-        return (new PayBill($this->client, $buyerSkuCode, $customerNo, $refId))->perform();
+        return (new PayBill($this->client, $buyerSkuCode, $customerNo, $refId, $amount))->perform();
     }
 
     /**
